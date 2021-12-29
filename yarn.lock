@@ -1386,11 +1386,6 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/coingecko-api@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@types/coingecko-api/-/coingecko-api-1.0.6.tgz#e73fd6bd2addd8df55475481f288e48f1caa48fd"
-  integrity sha512-OKzs9J5YuMlhYZXbX7O4GFCtvl32dAiyam+aBjkccN0zWaY45TD7TVTty7nIoYiD8P6E+qCWK40cRZYkIbBlyg==
-
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
@@ -2366,11 +2361,6 @@ co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
-
-coingecko-api@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/coingecko-api/-/coingecko-api-1.0.10.tgz#ac8694d5999f00727fe55f0078ce2917603076b2"
-  integrity sha512-7YLLC85+daxAw5QlBWoHVBVpJRwoPr4HtwanCr8V/WRjoyHTa1Lb9DQAvv4MDJZHiz4no6HGnDQnddtjV35oRA==
 
 collect-v8-coverage@^1.0.0:
   version "1.0.1"
@@ -5964,13 +5954,6 @@ react-native@0.66.4:
     use-subscription "^1.0.0"
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
-
-react-number-format@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-4.9.0.tgz#fd1defb74cc6ccc43a9e579f67d752c03ba897e4"
-  integrity sha512-HC4ZfvZSm6Gqq77/D4gz823XkvqK4AWAg4PxPv9Paz08hryAOnDjZk89iWmRLafeSOYG3TOx37ypHXMRez8q+w==
-  dependencies:
-    prop-types "^15.7.2"
 
 react-redux@^7.2.6:
   version "7.2.6"
