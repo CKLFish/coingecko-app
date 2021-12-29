@@ -8,8 +8,8 @@ xcode 13.2.1
 
 ## Run
 
-1. yarn
-1. yarn ios / yarn android
+- yarn
+- yarn ios / yarn android --variant='release' // # react-native-mmkv-storage used JSI and JSI not supported debug mode yet
 
 ## Limitation
 
