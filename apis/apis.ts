@@ -17,14 +17,14 @@ type CoinDataOptions = {
   sparkline?: boolean;
 };
 
-const booleanToString = (status: any) => {
+export const booleanToString = (status: any) => {
   if (typeof status === 'boolean') {
     return status.toString();
   }
   return status;
 };
 
-const optionsToQuery = (options: Object | undefined) => {
+export const optionsToQuery = (options: Object | undefined) => {
   if (!options || Object.keys(options).length === 0) {
     return '';
   }
@@ -43,16 +43,17 @@ class RequestHelper {
   public static coinsPageIndex = 0;
   public static coinsPageMax = 0;
 
-  public static getAllCoins = async () => {
-    await this.getCoinsByPage(1);
-    const allCoinsPageResponse = await Promise.all(
-      Array.from(Array(this.coinsPageMax)).map(async coinPageIndex => {
-        return RequestHelper.getCoinsByPage(coinPageIndex);
-      }),
-    );
-    // console.log('allCoinsPageResponse:: ', allCoinsPageResponse);
-    return allCoinsPageResponse;
-  };
+  // public static getAllCoins = async () => {
+  //   await this.getCoinsByPage(1);
+  //   const allCoinsPageResponse = await Promise.all(
+  //     Array.from(Array(this.coinsPageMax)).map(async coinPageIndex => {
+  //       return RequestHelper.getCoinsByPage(coinPageIndex);
+  //     }),
+  //   );
+  //   // console.log('allCoinsPageResponse:: ', allCoinsPageResponse);
+  //   return allCoinsPageResponse;
+  // };
+
   public static getCoinsByPage = async (pageIndex: number = 0) => {
     const coinsResponse = await this.coinGeckoClient.get<CoinsResponseData[]>(
       `/coins?page=${pageIndex + 1}`,

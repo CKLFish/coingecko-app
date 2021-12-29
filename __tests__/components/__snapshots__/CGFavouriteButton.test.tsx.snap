@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CGFavouriteButton favourite 1`] = `
+<Text
+  allowFontScaling={false}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Material Design Icons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  󱐯
+</Text>
+`;
+
+exports[`CGFavouriteButton non-favourite 1`] = `
+<Text
+  allowFontScaling={false}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Material Design Icons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  󱐱
+</Text>
+`;
+
+exports[`CGFavouriteButton withCallback 1`] = `
+<Text
+  allowFontScaling={false}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Material Design Icons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  󱐱
+</Text>
+`;

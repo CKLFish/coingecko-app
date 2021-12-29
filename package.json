@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --verbose --update-snapshot --coverage  --detectOpenHandles",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
@@ -16,13 +16,17 @@
     "@reduxjs/toolkit": "^1.7.1",
     "axios": "^0.24.0",
     "i18next": "^21.6.4",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
     "lodash": "^4.17.21",
     "react": "17.0.2",
     "react-i18next": "^11.15.2",
     "react-native": "0.66.4",
     "react-native-chart-kit": "^6.11.0",
+    "react-native-gesture-handler": "^2.1.0",
     "react-native-mmkv-storage": "^0.6.6",
     "react-native-paper": "^4.11.1",
+    "react-native-reanimated": "^2.3.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
     "react-native-svg": "^12.1.1",
@@ -36,6 +40,9 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@types/enzyme": "^3.10.10",
+    "@types/enzyme-adapter-react-15": "^1.0.6",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.178",
     "@types/react-native": "^0.66.4",
@@ -45,11 +52,16 @@
     "@typescript-eslint/parser": "^5.7.0",
     "@welldone-software/why-did-you-render": "^6.2.3",
     "babel-jest": "^26.6.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.14.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.66.2",
+    "react-dom": "^17.0.2",
     "react-test-renderer": "17.0.2",
+    "redux-saga-test": "^1.0.1",
+    "redux-saga-testing": "^2.0.1",
     "typescript": "^4.4.4"
   },
   "resolutions": {
@@ -57,6 +69,10 @@
   },
   "jest": {
     "preset": "react-native",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -64,6 +80,14 @@
       "jsx",
       "json",
       "node"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)?$",
+    "transformIgnorePatterns": [],
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/wdyr.ts"
     ]
   }
 }

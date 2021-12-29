@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 
 import CGLoadingIndicator from './CGLoadingIndicator';
 
-const CGLoading = () => {
+const CGLoading: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.inner}>
