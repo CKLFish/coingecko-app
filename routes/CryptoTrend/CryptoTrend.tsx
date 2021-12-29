@@ -6,7 +6,7 @@ import ACTION_TYPES from '../../actions';
 import CGError from '../../components/CGError';
 import CGLoading from '../../components/CGLoading';
 import CGTrendCard from '../../components/CGTrendCard';
-import {Coin, CoinData} from '../../interfaces/response';
+import {CoinData} from '../../interfaces/response';
 import {IRootState} from '../../store';
 
 const CryptoTrend = () => {
@@ -26,7 +26,7 @@ const CryptoTrend = () => {
     fetchTrendList();
   }, [fetchTrendList]);
 
-  const onRenderItem: ListRenderItem<CoinData> = ({item: { item }, index}) => {
+  const onRenderItem: ListRenderItem<CoinData> = ({item: {item}, index}) => {
     return (
       <CGTrendCard
         key={index}
@@ -45,7 +45,6 @@ const CryptoTrend = () => {
   if (error) {
     return <CGError onPress={fetchTrendList} />;
   }
-
 
   return coins && coins.length > 0 ? (
     <FlatList
