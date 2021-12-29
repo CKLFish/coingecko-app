@@ -14,8 +14,9 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-  import com.facebook.react.bridge.JSIModulePackage;
-  import com.swmansion.reanimated.ReanimatedJSIModulePackage;
+import com.facebook.react.bridge.JSIModulePackage;
+import com.swmansion.reanimated.ReanimatedJSIModulePackage;
+import com.coingecko.CustomMMKVJSIModulePackage; // <- add here
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -25,10 +26,11 @@ public class MainApplication extends Application implements ReactApplication {
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
         }
-
+        
+        // add this method to load our CustomMMKVJSIModulePackage.
         @Override
         protected JSIModulePackage getJSIModulePackage() {
-            return new MMKVJSIPackage();
+            return new CustomMMKVJSIModulePackage();
         }
 
         @Override

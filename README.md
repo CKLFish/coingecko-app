@@ -1,5 +1,11 @@
 # Coingecko-APP
 
+## Environment
+
+nodejs v16.4
+cocoapods 1.11.2
+xcode 13.2.1
+
 ## Run
 
 1. yarn
